@@ -1,19 +1,21 @@
-import argon2 from 'argon2';
+import bcrypt from 'bcrypt';
+
+const SALT_ROUNDS = 6; 
 
 export async function hashPassword(password) {
     try {
-      const hashedPassword = await argon2.hash(password);
-      return hashedPassword; 
+        const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
+        return hashedPassword; 
     } catch (err) {
-      console.error('Error hashing password:', err);
+        console.error('Error hashing password:', err);
     }
 }
 
 export async function verifyPassword(storedHash, password) {
     try {
-      const match = await argon2.verify(storedHash, password);
-      return match; 
+        const match = await bcrypt.compare(password, storedHash);
+        return match; 
     } catch (err) {
-      console.error('Error verifying password:', err);
+        console.error('Error verifying password:', err);
     }
 }
