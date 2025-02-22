@@ -63,7 +63,7 @@ app.use("/api/v1/posts", postRoutes);
 app.use("/api/v1/notifications", notificationRoutes);
 app.use("/api/v1/messages", messageRoutes);
 app.get("/", (req, res) => {
-  res.send("Welcome to Linkify");
+  res.send("Welcome to Linkify social app");
 });
 app.get("*", (req, res) => {
   res.send("Welcome to Linkify");
