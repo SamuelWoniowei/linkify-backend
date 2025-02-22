@@ -1,0 +1,18 @@
+const notificationTitles = {
+  newFollower: "You have a new follower!",
+  newLike: "Someone liked your post!",
+  newComment: "You have a new comment on your post.",
+  newMessage: "You received a new message.",
+  friendRequest: "You have a new friend request.",
+  friendRequestAccepted: "Your friend request has been accepted!",
+  postShared: "Someone shared your post.",
+  postReported: "Your post has been reported.",
+  mention: "You were mentioned in a post!",
+  eventInvite: "You’ve been invited to an event.",
+  linkShared: "A link you shared got some attention!",
+  profileUpdated: "Your profile has been updated.",
+  newConnection: "You've connected with a new user!",
+  notificationEnabled: "Notifications are now turned on for your account.",
+  newFollowerStory: "A new story has been added by someone you follow.",
+  accountSuspended: "Your account has been temporarily suspended.",
+};
